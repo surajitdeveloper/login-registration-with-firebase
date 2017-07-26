@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Sign-Up/Login Form</title>
+    <!--link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'-->
+    
+    <link rel="stylesheet" href="css/normalize.css">
+
+    
+        <link rel="stylesheet" href="css/style.css">
+
+ <link rel="stylesheet" href="css/sweetalert.css">
+    
+    
+  </head>
+
+  <body onload="home_load();" ng-app="myauth">
+
+    <div ng-controller = "authform" class="form">
+      
+      <ul class="tab-group">
+        <li ng-class="signup_class" id="signup_tab" class="tab active"><a>Sign Up</a></li>
+        <li ng-class="login_class" id="login_tab" class="tab"><a>Log In</a></li>
+      </ul>
+      
+      <div class="tab-content">
+	  <!-- sign up section start here -->
+        <div id="signup">   
+          <h1>Sign Up</h1>
+          
+          <form ng-submit="signup()" method="post">
+          
+          <div class="top-row">
+            <div class="field-wrap">
+              <label></label>
+              <input placeholder="First Name*" ng-model="reg_first_name" type="text" required autocomplete="off" />
+            </div>
+        
+            <div class="field-wrap">
+              <label></label>
+              <input placeholder="Last Name*" ng-model="reg_last_name" type="text" required autocomplete="off"/>
+            </div>
+          </div>
+
+          <div class="field-wrap">
+            <label></label>
+            <input placeholder="Mobile Number*" ng-model="reg_email" type="text" required autocomplete="off"/>
+          </div>
+          
+          <div class="field-wrap">
+            <label></label>
+            <input placeholder="Set A Password*" ng-model="reg_password" type="password" required autocomplete="off"/>
+          </div>
+          
+          <button type="submit" class="button button-block"/>Get Started</button>
+          
+          </form>
+
+        </div>
+        <!-- sign up section end here -->
+		<!-- car registration section start here -->
+		<!-- car registration section end here -->
+        <div id="login">   
+          <h1>Welcome Back!</h1>
+          
+          <form ng-submit="login()" method="post">
+          
+            <div class="field-wrap">
+            <label></label>
+            <input placeholder="Mobile Number*" ng-model="log_email" type="text" required autocomplete="off"/>
+          </div>
+          
+          <div class="field-wrap">
+            <label></label>
+            <input placeholder="Password*" ng-model="log_password" type="password" required autocomplete="off"/>
+          </div>
+          
+          <p class="forgot"><a href="#">Forgot Password?</a></p>
+          
+          <button type="submit" class="button button-block"/>Log In</button>
+          
+          </form>
+
+        </div>
+        
+      </div><!-- tab-content -->
+      
+</div> <!-- /form -->
+
+    <script src='js/jquery.min.js'></script>
+	<script src='js/angular.min.js'></script>
+	<script src="js/sweetalert-dev.js"></script>
+  <script src="js/firebase.js"></script>
+
+        <script src="js/functions.js"></script>
+  </body>
+</html>
